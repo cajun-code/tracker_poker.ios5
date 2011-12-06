@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE952F46148DC5F900D316DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE952F45148DC5F900D316DF /* UIKit.framework */; };
+		CE952F48148DC5F900D316DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE952F47148DC5F900D316DF /* Foundation.framework */; };
+		CE952F4A148DC5F900D316DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE952F49148DC5F900D316DF /* CoreGraphics.framework */; };
+		CE952F50148DC5F900D316DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE952F4E148DC5F900D316DF /* InfoPlist.strings */; };
+		CE952F52148DC5F900D316DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE952F51148DC5F900D316DF /* main.m */; };
+		CE952F56148DC5F900D316DF /* TrackerPokerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE952F55148DC5F900D316DF /* TrackerPokerAppDelegate.m */; };
+		CE952F59148DC5F900D316DF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE952F57148DC5F900D316DF /* MainStoryboard.storyboard */; };
+		CE952F5C148DC5F900D316DF /* TrackerPokerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE952F5B148DC5F900D316DF /* TrackerPokerViewController.m */; };
+		CE952F64148DC5F900D316DF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE952F63148DC5F900D316DF /* SenTestingKit.framework */; };
+		CE952F65148DC5F900D316DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE952F45148DC5F900D316DF /* UIKit.framework */; };
+		CE952F66148DC5F900D316DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE952F47148DC5F900D316DF /* Foundation.framework */; };
+		CE952F6E148DC5F900D316DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE952F6C148DC5F900D316DF /* InfoPlist.strings */; };
+		CE952F71148DC5F900D316DF /* TrackerPokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE952F70148DC5F900D316DF /* TrackerPokerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE952F67148DC5F900D316DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE952F38148DC5F900D316DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE952F40148DC5F900D316DF;
+			remoteInfo = TrackerPoker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE952F41148DC5F900D316DF /* TrackerPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackerPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE952F45148DC5F900D316DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CE952F47148DC5F900D316DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE952F49148DC5F900D316DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CE952F4D148DC5F900D316DF /* TrackerPoker-Info.plist */ = {isa = PBXFileReference; path = "TrackerPoker-Info.plist"; sourceTree = "<group>"; };
+		CE952F4F148DC5F900D316DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE952F51148DC5F900D316DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE952F53148DC5F900D316DF /* TrackerPoker-Prefix.pch */ = {isa = PBXFileReference; path = "TrackerPoker-Prefix.pch"; sourceTree = "<group>"; };
+		CE952F54148DC5F900D316DF /* TrackerPokerAppDelegate.h */ = {isa = PBXFileReference; path = TrackerPokerAppDelegate.h; sourceTree = "<group>"; };
+		CE952F55148DC5F900D316DF /* TrackerPokerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerPokerAppDelegate.m; sourceTree = "<group>"; };
+		CE952F58148DC5F900D316DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		CE952F5A148DC5F900D316DF /* TrackerPokerViewController.h */ = {isa = PBXFileReference; path = TrackerPokerViewController.h; sourceTree = "<group>"; };
+		CE952F5B148DC5F900D316DF /* TrackerPokerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerPokerViewController.m; sourceTree = "<group>"; };
+		CE952F62148DC5F900D316DF /* TrackerPokerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackerPokerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE952F63148DC5F900D316DF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		CE952F6B148DC5F900D316DF /* TrackerPokerTests-Info.plist */ = {isa = PBXFileReference; path = "TrackerPokerTests-Info.plist"; sourceTree = "<group>"; };
+		CE952F6D148DC5F900D316DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE952F6F148DC5F900D316DF /* TrackerPokerTests.h */ = {isa = PBXFileReference; path = TrackerPokerTests.h; sourceTree = "<group>"; };
+		CE952F70148DC5F900D316DF /* TrackerPokerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerPokerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE952F3E148DC5F900D316DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE952F46148DC5F900D316DF /* UIKit.framework in Frameworks */,
+				CE952F48148DC5F900D316DF /* Foundation.framework in Frameworks */,
+				CE952F4A148DC5F900D316DF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE952F5E148DC5F900D316DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE952F64148DC5F900D316DF /* SenTestingKit.framework in Frameworks */,
+				CE952F65148DC5F900D316DF /* UIKit.framework in Frameworks */,
+				CE952F66148DC5F900D316DF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE952F36148DC5F900D316DF = {
+			isa = PBXGroup;
+			children = (
+				CE952F4B148DC5F900D316DF /* TrackerPoker */,
+				CE952F69148DC5F900D316DF /* TrackerPokerTests */,
+				CE952F44148DC5F900D316DF /* Frameworks */,
+				CE952F42148DC5F900D316DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE952F42148DC5F900D316DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE952F41148DC5F900D316DF /* TrackerPoker.app */,
+				CE952F62148DC5F900D316DF /* TrackerPokerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE952F44148DC5F900D316DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE952F45148DC5F900D316DF /* UIKit.framework */,
+				CE952F47148DC5F900D316DF /* Foundation.framework */,
+				CE952F49148DC5F900D316DF /* CoreGraphics.framework */,
+				CE952F63148DC5F900D316DF /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE952F4B148DC5F900D316DF /* TrackerPoker */ = {
+			isa = PBXGroup;
+			children = (
+				CE952F54148DC5F900D316DF /* TrackerPokerAppDelegate.h */,
+				CE952F55148DC5F900D316DF /* TrackerPokerAppDelegate.m */,
+				CE952F57148DC5F900D316DF /* MainStoryboard.storyboard */,
+				CE952F5A148DC5F900D316DF /* TrackerPokerViewController.h */,
+				CE952F5B148DC5F900D316DF /* TrackerPokerViewController.m */,
+				CE952F4C148DC5F900D316DF /* Supporting Files */,
+			);
+			path = TrackerPoker;
+			sourceTree = "<group>";
+		};
+		CE952F4C148DC5F900D316DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE952F4D148DC5F900D316DF /* TrackerPoker-Info.plist */,
+				CE952F4E148DC5F900D316DF /* InfoPlist.strings */,
+				CE952F51148DC5F900D316DF /* main.m */,
+				CE952F53148DC5F900D316DF /* TrackerPoker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE952F69148DC5F900D316DF /* TrackerPokerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE952F6F148DC5F900D316DF /* TrackerPokerTests.h */,
+				CE952F70148DC5F900D316DF /* TrackerPokerTests.m */,
+				CE952F6A148DC5F900D316DF /* Supporting Files */,
+			);
+			path = TrackerPokerTests;
+			sourceTree = "<group>";
+		};
+		CE952F6A148DC5F900D316DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE952F6B148DC5F900D316DF /* TrackerPokerTests-Info.plist */,
+				CE952F6C148DC5F900D316DF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE952F40148DC5F900D316DF /* TrackerPoker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE952F74148DC5F900D316DF /* Build configuration list for PBXNativeTarget "TrackerPoker" */;
+			buildPhases = (
+				CE952F3D148DC5F900D316DF /* Sources */,
+				CE952F3E148DC5F900D316DF /* Frameworks */,
+				CE952F3F148DC5F900D316DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrackerPoker;
+			productName = TrackerPoker;
+			productReference = CE952F41148DC5F900D316DF /* TrackerPoker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE952F61148DC5F900D316DF /* TrackerPokerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE952F77148DC5F900D316DF /* Build configuration list for PBXNativeTarget "TrackerPokerTests" */;
+			buildPhases = (
+				CE952F5D148DC5F900D316DF /* Sources */,
+				CE952F5E148DC5F900D316DF /* Frameworks */,
+				CE952F5F148DC5F900D316DF /* Resources */,
+				CE952F60148DC5F900D316DF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE952F68148DC5F900D316DF /* PBXTargetDependency */,
+			);
+			name = TrackerPokerTests;
+			productName = TrackerPokerTests;
+			productReference = CE952F62148DC5F900D316DF /* TrackerPokerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE952F38148DC5F900D316DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = CajunCode;
+			};
+			buildConfigurationList = CE952F3B148DC5F900D316DF /* Build configuration list for PBXProject "TrackerPoker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CE952F36148DC5F900D316DF;
+			productRefGroup = CE952F42148DC5F900D316DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE952F40148DC5F900D316DF /* TrackerPoker */,
+				CE952F61148DC5F900D316DF /* TrackerPokerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE952F3F148DC5F900D316DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE952F50148DC5F900D316DF /* InfoPlist.strings in Resources */,
+				CE952F59148DC5F900D316DF /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE952F5F148DC5F900D316DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE952F6E148DC5F900D316DF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE952F60148DC5F900D316DF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE952F3D148DC5F900D316DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE952F52148DC5F900D316DF /* main.m in Sources */,
+				CE952F56148DC5F900D316DF /* TrackerPokerAppDelegate.m in Sources */,
+				CE952F5C148DC5F900D316DF /* TrackerPokerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE952F5D148DC5F900D316DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE952F71148DC5F900D316DF /* TrackerPokerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE952F68148DC5F900D316DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE952F40148DC5F900D316DF /* TrackerPoker */;
+			targetProxy = CE952F67148DC5F900D316DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE952F4E148DC5F900D316DF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE952F4F148DC5F900D316DF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CE952F57148DC5F900D316DF /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE952F58148DC5F900D316DF /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		CE952F6C148DC5F900D316DF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE952F6D148DC5F900D316DF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE952F72148DC5F900D316DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CE952F73148DC5F900D316DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE952F75148DC5F900D316DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrackerPoker/TrackerPoker-Prefix.pch";
+				INFOPLIST_FILE = "TrackerPoker/TrackerPoker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CE952F76148DC5F900D316DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrackerPoker/TrackerPoker-Prefix.pch";
+				INFOPLIST_FILE = "TrackerPoker/TrackerPoker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CE952F78148DC5F900D316DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrackerPoker.app/TrackerPoker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrackerPoker/TrackerPoker-Prefix.pch";
+				INFOPLIST_FILE = "TrackerPokerTests/TrackerPokerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CE952F79148DC5F900D316DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrackerPoker.app/TrackerPoker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TrackerPoker/TrackerPoker-Prefix.pch";
+				INFOPLIST_FILE = "TrackerPokerTests/TrackerPokerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE952F3B148DC5F900D316DF /* Build configuration list for PBXProject "TrackerPoker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE952F72148DC5F900D316DF /* Debug */,
+				CE952F73148DC5F900D316DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE952F74148DC5F900D316DF /* Build configuration list for PBXNativeTarget "TrackerPoker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE952F75148DC5F900D316DF /* Debug */,
+				CE952F76148DC5F900D316DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CE952F77148DC5F900D316DF /* Build configuration list for PBXNativeTarget "TrackerPokerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE952F78148DC5F900D316DF /* Debug */,
+				CE952F79148DC5F900D316DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE952F38148DC5F900D316DF /* Project object */;
+}
