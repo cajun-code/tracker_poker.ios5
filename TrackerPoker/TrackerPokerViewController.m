@@ -9,6 +9,10 @@
 #import "TrackerPokerViewController.h"
 
 @implementation TrackerPokerViewController
+@synthesize vote;
+- (IBAction)votePressed:(UIButton *)sender {
+    self.vote.text = sender.currentTitle;
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -26,6 +30,7 @@
 
 - (void)viewDidUnload
 {
+    [self setVote:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
