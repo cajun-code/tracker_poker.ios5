@@ -8,10 +8,25 @@
 
 #import "TrackerPokerViewController.h"
 
+
+@interface TrackerPokerViewController()
+@property (readonly) Dealer * dealer;
+@end
+
 @implementation TrackerPokerViewController
+
 @synthesize vote;
+
+- (Dealer *) dealer{
+    return [Dealer sharedInstance];
+}
+
 - (IBAction)votePressed:(UIButton *)sender {
     self.vote.text = sender.currentTitle;
+    self.dealer.vote = self.vote.text;
+    
+    [self performSegueWithIdentifier: @"card" sender:self ];
+    
 }
 
 - (void)didReceiveMemoryWarning

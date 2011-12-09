@@ -16,6 +16,6 @@
 
 - (void) submitVote;
 - (BOOL) login:(NSString*)user WithPassword:(NSString *)password;
-+ (id) initDealer;
++ (id) sharedInstance;
 
 @end

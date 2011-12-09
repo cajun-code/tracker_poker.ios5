@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Dealer.h"
+#import "CardViewController.h"
 
 @interface TrackerPokerViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *vote;

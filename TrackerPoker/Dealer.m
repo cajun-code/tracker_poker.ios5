@@ -16,19 +16,27 @@
 
 @implementation Dealer
 
+
 @synthesize vote = _vote;
 @synthesize room = _room;
 @synthesize token = _token;
 
-+ (id) initDealer{
-    static Dealer * _dealer;
-    if (!(_dealer)){
-        _dealer = [[Dealer alloc]init];
-    }
-    return _dealer;
-    
++ (id)sharedInstance
+{
+    static dispatch_once_t pred = 0;
+    __strong static id _sharedObject = nil;
+    dispatch_once(&pred, ^{
+        _sharedObject = [[self alloc] init]; // or some other init method
+    });
+    return _sharedObject;
 }
 
+- (void) submitVote{
+    
+}
+- (BOOL) login:(NSString*)user WithPassword:(NSString *)password{
+    return NO;
+}
 
 
 @end
