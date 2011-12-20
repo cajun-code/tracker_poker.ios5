@@ -1,0 +1,47 @@
+
+// open view from another
+UIViewController* flipViewController = [[UIViewController alloc] initWithNibName:@"flip" bundle:[NSBundle mainBundle]];
+[self.view addSubview:flipViewController.view];
+
+// Create Singelton From developer.apple.com
+// http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CocoaFundamentals/CocoaObjects/CocoaObjects.html#//apple_ref/doc/uid/TP40002974-CH4-SW32
+
+static MyGizmoClass *sharedGizmoManager = nil;
+ 
++ (MyGizmoClass*)sharedManager
+{
+    if (sharedGizmoManager == nil) {
+        sharedGizmoManager = [[super allocWithZone:NULL] init];
+    }
+    return sharedGizmoManager;
+}
+ 
++ (id)allocWithZone:(NSZone *)zone
+{
+    return [[self sharedManager] retain];
+}
+ 
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
+ 
+- (id)retain
+{
+    return self;
+}
+ 
+- (NSUInteger)retainCount
+{
+    return NSUIntegerMax;  //denotes an object that cannot be released
+}
+ 
+- (void)release
+{
+    //do nothing
+}
+ 
+- (id)autorelease
+{
+    return self;
+}

@@ -25,7 +25,13 @@
     self.vote.text = sender.currentTitle;
     self.dealer.vote = self.vote.text;
     
+    
+    // *** IOS 5 Change View with Segue ***
     [self performSegueWithIdentifier: @"card" sender:self ];
+    
+    // *** IOS <= 4 Change View with xib
+//    UIViewController* cardViewController = [[UIViewController alloc] initWithNibName:@"card" bundle:[NSBundle mainBundle]];
+//    [self.view addSubview:cardViewController.view];
     
 }
 
