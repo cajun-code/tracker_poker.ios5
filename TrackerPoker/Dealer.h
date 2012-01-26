@@ -7,15 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
+#import "NSString+containsCategory.h"
 
-@interface Dealer : NSObject
+@interface Dealer : NSObject <RKRequestDelegate>
 
-
+@property (nonatomic, strong) NSString * token;
 @property (nonatomic, strong) NSString * vote;
 @property (nonatomic, strong) NSString * room;
+@property (nonatomic, strong) NSString * story;
 
 - (void) submitVote;
-- (BOOL) login:(NSString*)user WithPassword:(NSString *)password;
+- (void) login:(NSString*)user WithPassword:(NSString *)password;
+- (void) joinRoom;
 + (id) sharedInstance;
 
 @end

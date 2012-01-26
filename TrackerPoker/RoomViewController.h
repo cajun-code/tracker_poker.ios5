@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Dealer.h"
 
 @interface RoomViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *room;
+- (IBAction)joinRoom:(UIButton *)sender;
+- (IBAction)scanCode:(UIButton *)sender;
 
 @end

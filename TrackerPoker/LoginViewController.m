@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 
 @implementation LoginViewController
+@synthesize email;
+@synthesize password;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,6 +39,8 @@
 
 - (void)viewDidUnload
 {
+    [self setEmail:nil];
+    [self setPassword:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -49,5 +53,8 @@
 }
 
 - (IBAction)processLogin:(UIButton *)sender {
+    Dealer * dealer = [Dealer sharedInstance];
+    [dealer login: email.text WithPassword: password.text];
+    [self dismissModalViewControllerAnimated: YES];
 }
 @end

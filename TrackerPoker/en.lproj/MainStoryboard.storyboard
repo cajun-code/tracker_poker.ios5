@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="tm6-xb-50v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
@@ -215,6 +215,22 @@
                                     <action selector="votePressed:" destination="2" eventType="touchUpInside" id="MKY-Mj-HBA"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Ucu-oQ-pSL">
+                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Log-in" width="81" id="ahV-ZP-GDx">
+                                        <connections>
+                                            <segue destination="tm6-xb-50v" kind="modal" id="gWH-dH-raV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Join Room" id="6jh-De-A0Z">
+                                        <connections>
+                                            <segue destination="Lr7-lb-Wi2" kind="modal" id="N5Z-2B-z8s"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -225,7 +241,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="29" y="574"/>
+            <point key="canvasLocation" x="-931" y="-84"/>
         </scene>
         <scene sceneID="zwU-9m-YO5">
             <objects>
@@ -281,7 +297,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="508" y="574"/>
+            <point key="canvasLocation" x="-56" y="536"/>
         </scene>
         <scene sceneID="o9m-Nw-ip7">
             <objects>
@@ -332,30 +348,16 @@
                                     <action selector="processLogin:" destination="tm6-xb-50v" eventType="touchUpInside" id="Apm-LV-xPc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mqF-sC-Vaj">
-                                <rect key="frame" x="20" y="211" width="280" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Play Without Connecting">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="2" kind="modal" identifier="pokerView" modalTransitionStyle="coverVertical" id="TTy-j8-Xuj"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="Lr7-lb-Wi2" kind="modal" identifier="room" modalTransitionStyle="crossDissolve" id="EYr-FR-dDt"/>
+                        <outlet property="email" destination="8nV-s3-CmH" id="tBI-dE-TxA"/>
+                        <outlet property="password" destination="XJ8-CR-n6g" id="LEg-LB-XQL"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-770" y="-127"/>
+            <point key="canvasLocation" x="-624" y="659"/>
         </scene>
         <scene sceneID="2oT-zA-1h5">
             <objects>
@@ -379,7 +381,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U9O-wp-KPp">
-                                <rect key="frame" x="184" y="111" width="116" height="37"/>
+                                <rect key="frame" x="155" y="111" width="145" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Join Room">
@@ -389,6 +391,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="joinRoom:" destination="Lr7-lb-Wi2" eventType="touchUpInside" id="C2z-Fn-aPu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0vO-u7-b80">
                                 <rect key="frame" x="18" y="111" width="129" height="37"/>
@@ -401,16 +406,19 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="scanCode:" destination="Lr7-lb-Wi2" eventType="touchUpInside" id="cir-gn-72a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="2" kind="modal" identifier="poker" modalTransitionStyle="coverVertical" id="0Je-gV-8nG"/>
+                        <outlet property="room" destination="q37-UV-1NX" id="MxY-Ao-Ryk"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-228" y="-127"/>
+            <point key="canvasLocation" x="32" y="-89"/>
         </scene>
     </scenes>
     <classes>
@@ -424,10 +432,17 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
             <relationships>
                 <relationship kind="action" name="processLogin:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="RoomViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RoomViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="joinRoom:" candidateClass="UIButton"/>
+                <relationship kind="action" name="scanCode:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="room" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="TrackerPokerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TrackerPokerViewController.h"/>
@@ -441,7 +456,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="TTy-j8-Xuj"/>
-    </inferredMetricsTieBreakers>
 </document>

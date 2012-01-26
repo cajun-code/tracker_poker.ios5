@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Dealer.h"
 
 @interface LoginViewController : UIViewController
 - (IBAction)processLogin:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UITextField *email;
+@property (weak, nonatomic) IBOutlet UITextField *password;
 
 @end

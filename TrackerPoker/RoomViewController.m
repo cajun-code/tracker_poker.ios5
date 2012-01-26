@@ -9,6 +9,7 @@
 #import "RoomViewController.h"
 
 @implementation RoomViewController
+@synthesize room;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +47,7 @@
 
 - (void)viewDidUnload
 {
+    [self setRoom:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -57,4 +59,13 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)joinRoom:(UIButton *)sender {
+    Dealer * dealer = [Dealer sharedInstance];
+    dealer.room = room.text;
+    [dealer joinRoom];
+    [self dismissModalViewControllerAnimated: YES];
+}
+
+- (IBAction)scanCode:(UIButton *)sender {
+}
 @end

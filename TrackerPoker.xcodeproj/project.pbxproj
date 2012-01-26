@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE172BBC14D03DEF00D9A9CC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE172BBB14D03DEF00D9A9CC /* CoreData.framework */; };
+		CE172BBF14D11CC300D9A9CC /* NSString+containsCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CE172BBE14D11CC300D9A9CC /* NSString+containsCategory.m */; };
+		CE172BDE14D1BA0600D9A9CC /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE172BD814D1BA0600D9A9CC /* libzbar.a */; };
+		CE172BDF14D1BA0600D9A9CC /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = CE172BDA14D1BA0600D9A9CC /* zbar-back.png */; };
+		CE172BE014D1BA0600D9A9CC /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = CE172BDB14D1BA0600D9A9CC /* zbar-help.html */; };
+		CE172BE114D1BA0600D9A9CC /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = CE172BDC14D1BA0600D9A9CC /* zbar-helpicons.png */; };
+		CE172BE214D1BA0600D9A9CC /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = CE172BDD14D1BA0600D9A9CC /* zbar-samples.png */; };
+		CE3B856114CFAB8D002A49DD /* libRestKitJSONParserYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B854114CFA4DC002A49DD /* libRestKitJSONParserYAJL.a */; };
+		CE3B856214CFAB8D002A49DD /* libRestKitNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B853914CFA4DC002A49DD /* libRestKitNetwork.a */; };
+		CE3B856314CFAB8D002A49DD /* libRestKitObjectMapping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B853B14CFA4DC002A49DD /* libRestKitObjectMapping.a */; };
+		CE3B856414CFAB8D002A49DD /* libRestKitSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B853D14CFA4DC002A49DD /* libRestKitSupport.a */; };
+		CE3B857114CFAC13002A49DD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B857014CFAC13002A49DD /* CFNetwork.framework */; };
+		CE3B857614CFAC7D002A49DD /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B857214CFAC7D002A49DD /* libxml2.dylib */; };
+		CE3B857714CFAC7D002A49DD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B857314CFAC7D002A49DD /* MobileCoreServices.framework */; };
+		CE3B857814CFAC7D002A49DD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B857414CFAC7D002A49DD /* Security.framework */; };
+		CE3B857914CFAC7D002A49DD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B857514CFAC7D002A49DD /* SystemConfiguration.framework */; };
 		CE69F4A2148E5817004C316F /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE69F4A1148E5817004C316F /* CardViewController.m */; };
 		CE69F4A5148E9746004C316F /* Dealer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE69F4A4148E9746004C316F /* Dealer.m */; };
 		CE952F46148DC5F900D316DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE952F45148DC5F900D316DF /* UIKit.framework */; };
@@ -28,6 +44,118 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CE3B853814CFA4DC002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A07FC1255161B00976E89;
+			remoteInfo = RestKitNetwork;
+		};
+		CE3B853A14CFA4DC002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A08031255162C00976E89;
+			remoteInfo = RestKitObjectMapping;
+		};
+		CE3B853C14CFA4DC002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A080C12551D3000976E89;
+			remoteInfo = RestKitSupport;
+		};
+		CE3B853E14CFA4DC002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 20808DBD13DE8CDC000A156A;
+			remoteInfo = "RestKitJSONParser+NXJSON";
+		};
+		CE3B854014CFA4DC002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2590E64F125231F600531FA8;
+			remoteInfo = "RestKitJSONParser+YAJL";
+		};
+		CE3B854214CFA4DC002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2590E66B1252353700531FA8;
+			remoteInfo = "RestKitJSONParser+SBJSON";
+		};
+		CE3B854414CFA4DC002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 73057FD11331AD2E001908EE;
+			remoteInfo = "RestKitJSONParser+JSONKit";
+		};
+		CE3B854614CFA4DC002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25BD43BD1340315800DBACDD;
+			remoteInfo = "RestKitXMLParser+Libxml";
+		};
+		CE3B854814CFA4DC002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A081412551D5300976E89;
+			remoteInfo = RestKitCoreData;
+		};
+		CE3B854A14CFA4DC002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2523360511E79F090048F9B4;
+			remoteInfo = RestKitThree20;
+		};
+		CE3B854C14CFA4DC002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F6C39A510FE5C95008F47C5;
+			remoteInfo = UISpec;
+		};
+		CE3B855F14CFAB66002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 255B7588133BABBF00ED76AD;
+			remoteInfo = RestKit;
+		};
+		CE3B856514CFABC7002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 253A07FB1255161B00976E89;
+			remoteInfo = RestKitNetwork;
+		};
+		CE3B856714CFABC7002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 253A08021255162C00976E89;
+			remoteInfo = RestKitObjectMapping;
+		};
+		CE3B856914CFABC7002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 253A080B12551D3000976E89;
+			remoteInfo = RestKitSupport;
+		};
+		CE3B856B14CFABC7002A49DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2590E64E125231F600531FA8;
+			remoteInfo = "RestKitJSONParser+YAJL";
+		};
 		CE952F67148DC5F900D316DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CE952F38148DC5F900D316DF /* Project object */;
@@ -38,6 +166,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE172BBB14D03DEF00D9A9CC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CE172BBD14D11CC300D9A9CC /* NSString+containsCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+containsCategory.h"; sourceTree = "<group>"; };
+		CE172BBE14D11CC300D9A9CC /* NSString+containsCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+containsCategory.m"; sourceTree = "<group>"; };
+		CE172BC414D1BA0600D9A9CC /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		CE172BC514D1BA0600D9A9CC /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		CE172BC614D1BA0600D9A9CC /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		CE172BC714D1BA0600D9A9CC /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanner.h; sourceTree = "<group>"; };
+		CE172BC814D1BA0600D9A9CC /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		CE172BC914D1BA0600D9A9CC /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		CE172BCA14D1BA0600D9A9CC /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
+		CE172BCB14D1BA0600D9A9CC /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		CE172BCC14D1BA0600D9A9CC /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		CE172BCD14D1BA0600D9A9CC /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
+		CE172BCE14D1BA0600D9A9CC /* ZBarCameraSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCameraSimulator.h; sourceTree = "<group>"; };
+		CE172BCF14D1BA0600D9A9CC /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
+		CE172BD014D1BA0600D9A9CC /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
+		CE172BD114D1BA0600D9A9CC /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
+		CE172BD214D1BA0600D9A9CC /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
+		CE172BD314D1BA0600D9A9CC /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
+		CE172BD414D1BA0600D9A9CC /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
+		CE172BD514D1BA0600D9A9CC /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
+		CE172BD614D1BA0600D9A9CC /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
+		CE172BD714D1BA0600D9A9CC /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		CE172BD814D1BA0600D9A9CC /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+		CE172BDA14D1BA0600D9A9CC /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
+		CE172BDB14D1BA0600D9A9CC /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
+		CE172BDC14D1BA0600D9A9CC /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
+		CE172BDD14D1BA0600D9A9CC /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = ../../lib/objc/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		CE3B857014CFAC13002A49DD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CE3B857214CFAC7D002A49DD /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		CE3B857314CFAC7D002A49DD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CE3B857414CFAC7D002A49DD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CE3B857514CFAC7D002A49DD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CE69F4A0148E5817004C316F /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
 		CE69F4A1148E5817004C316F /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
 		CE69F4A3148E9746004C316F /* Dealer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dealer.h; sourceTree = "<group>"; };
@@ -73,9 +235,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE172BBC14D03DEF00D9A9CC /* CoreData.framework in Frameworks */,
+				CE3B857614CFAC7D002A49DD /* libxml2.dylib in Frameworks */,
+				CE3B857714CFAC7D002A49DD /* MobileCoreServices.framework in Frameworks */,
+				CE3B857814CFAC7D002A49DD /* Security.framework in Frameworks */,
+				CE3B857914CFAC7D002A49DD /* SystemConfiguration.framework in Frameworks */,
+				CE3B857114CFAC13002A49DD /* CFNetwork.framework in Frameworks */,
+				CE3B856114CFAB8D002A49DD /* libRestKitJSONParserYAJL.a in Frameworks */,
+				CE3B856214CFAB8D002A49DD /* libRestKitNetwork.a in Frameworks */,
+				CE3B856314CFAB8D002A49DD /* libRestKitObjectMapping.a in Frameworks */,
+				CE3B856414CFAB8D002A49DD /* libRestKitSupport.a in Frameworks */,
 				CE952F46148DC5F900D316DF /* UIKit.framework in Frameworks */,
 				CE952F48148DC5F900D316DF /* Foundation.framework in Frameworks */,
 				CE952F4A148DC5F900D316DF /* CoreGraphics.framework in Frameworks */,
+				CE172BDE14D1BA0600D9A9CC /* libzbar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,9 +265,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE172BC014D1BA0600D9A9CC /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				CE172BC114D1BA0600D9A9CC /* Headers */,
+				CE172BD814D1BA0600D9A9CC /* libzbar.a */,
+				CE172BD914D1BA0600D9A9CC /* Resources */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		CE172BC114D1BA0600D9A9CC /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				CE172BC214D1BA0600D9A9CC /* ZBarSDK */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		CE172BC214D1BA0600D9A9CC /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				CE172BC314D1BA0600D9A9CC /* zbar */,
+				CE172BCD14D1BA0600D9A9CC /* zbar.h */,
+				CE172BCE14D1BA0600D9A9CC /* ZBarCameraSimulator.h */,
+				CE172BCF14D1BA0600D9A9CC /* ZBarCaptureReader.h */,
+				CE172BD014D1BA0600D9A9CC /* ZBarHelpController.h */,
+				CE172BD114D1BA0600D9A9CC /* ZBarImage.h */,
+				CE172BD214D1BA0600D9A9CC /* ZBarImageScanner.h */,
+				CE172BD314D1BA0600D9A9CC /* ZBarReaderController.h */,
+				CE172BD414D1BA0600D9A9CC /* ZBarReaderView.h */,
+				CE172BD514D1BA0600D9A9CC /* ZBarReaderViewController.h */,
+				CE172BD614D1BA0600D9A9CC /* ZBarSDK.h */,
+				CE172BD714D1BA0600D9A9CC /* ZBarSymbol.h */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		CE172BC314D1BA0600D9A9CC /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				CE172BC414D1BA0600D9A9CC /* Decoder.h */,
+				CE172BC514D1BA0600D9A9CC /* Exception.h */,
+				CE172BC614D1BA0600D9A9CC /* Image.h */,
+				CE172BC714D1BA0600D9A9CC /* ImageScanner.h */,
+				CE172BC814D1BA0600D9A9CC /* Processor.h */,
+				CE172BC914D1BA0600D9A9CC /* Scanner.h */,
+				CE172BCA14D1BA0600D9A9CC /* Symbol.h */,
+				CE172BCB14D1BA0600D9A9CC /* Video.h */,
+				CE172BCC14D1BA0600D9A9CC /* Window.h */,
+			);
+			path = zbar;
+			sourceTree = "<group>";
+		};
+		CE172BD914D1BA0600D9A9CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE172BDA14D1BA0600D9A9CC /* zbar-back.png */,
+				CE172BDB14D1BA0600D9A9CC /* zbar-help.html */,
+				CE172BDC14D1BA0600D9A9CC /* zbar-helpicons.png */,
+				CE172BDD14D1BA0600D9A9CC /* zbar-samples.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE3B852514CFA4DB002A49DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE3B853914CFA4DC002A49DD /* libRestKitNetwork.a */,
+				CE3B853B14CFA4DC002A49DD /* libRestKitObjectMapping.a */,
+				CE3B853D14CFA4DC002A49DD /* libRestKitSupport.a */,
+				CE3B853F14CFA4DC002A49DD /* libRestKitJSONParser+NXJSON.a */,
+				CE3B854114CFA4DC002A49DD /* libRestKitJSONParserYAJL.a */,
+				CE3B854314CFA4DC002A49DD /* libRestKitJSONParserSBJSON.a */,
+				CE3B854514CFA4DC002A49DD /* libRestKitJSONParserJSONKit.a */,
+				CE3B854714CFA4DC002A49DD /* libRestKitXMLParserLibxml.a */,
+				CE3B854914CFA4DC002A49DD /* libRestKitCoreData.a */,
+				CE3B854B14CFA4DC002A49DD /* libRestKitThree20.a */,
+				CE3B854D14CFA4DC002A49DD /* UISpec.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CE952F36148DC5F900D316DF = {
 			isa = PBXGroup;
 			children = (
+				CE172BC014D1BA0600D9A9CC /* ZBarSDK */,
+				CE172BBB14D03DEF00D9A9CC /* CoreData.framework */,
+				CE3B857214CFAC7D002A49DD /* libxml2.dylib */,
+				CE3B857314CFAC7D002A49DD /* MobileCoreServices.framework */,
+				CE3B857414CFAC7D002A49DD /* Security.framework */,
+				CE3B857514CFAC7D002A49DD /* SystemConfiguration.framework */,
+				CE3B857014CFAC13002A49DD /* CFNetwork.framework */,
+				CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */,
 				CE952F4B148DC5F900D316DF /* TrackerPoker */,
 				CE952F69148DC5F900D316DF /* TrackerPokerTests */,
 				CE952F44148DC5F900D316DF /* Frameworks */,
@@ -140,6 +403,8 @@
 				CE69F4A3148E9746004C316F /* Dealer.h */,
 				CE69F4A4148E9746004C316F /* Dealer.m */,
 				CEFC49E714A114D400D1C7ED /* notes.txt */,
+				CE172BBD14D11CC300D9A9CC /* NSString+containsCategory.h */,
+				CE172BBE14D11CC300D9A9CC /* NSString+containsCategory.m */,
 			);
 			path = TrackerPoker;
 			sourceTree = "<group>";
@@ -188,6 +453,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				CE3B856614CFABC7002A49DD /* PBXTargetDependency */,
+				CE3B856814CFABC7002A49DD /* PBXTargetDependency */,
+				CE3B856A14CFABC7002A49DD /* PBXTargetDependency */,
+				CE3B856C14CFABC7002A49DD /* PBXTargetDependency */,
+				CE3B856014CFAB66002A49DD /* PBXTargetDependency */,
 			);
 			name = TrackerPoker;
 			productName = TrackerPoker;
@@ -232,6 +502,12 @@
 			mainGroup = CE952F36148DC5F900D316DF;
 			productRefGroup = CE952F42148DC5F900D316DF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CE3B852514CFA4DB002A49DD /* Products */;
+					ProjectRef = CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CE952F40148DC5F900D316DF /* TrackerPoker */,
@@ -239,6 +515,87 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CE3B853914CFA4DC002A49DD /* libRestKitNetwork.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitNetwork.a;
+			remoteRef = CE3B853814CFA4DC002A49DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE3B853B14CFA4DC002A49DD /* libRestKitObjectMapping.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitObjectMapping.a;
+			remoteRef = CE3B853A14CFA4DC002A49DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE3B853D14CFA4DC002A49DD /* libRestKitSupport.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitSupport.a;
+			remoteRef = CE3B853C14CFA4DC002A49DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE3B853F14CFA4DC002A49DD /* libRestKitJSONParser+NXJSON.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			name = "libRestKitJSONParser+NXJSON.a";
+			path = libRestKitJSONParserNXJSON.a;
+			remoteRef = CE3B853E14CFA4DC002A49DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE3B854114CFA4DC002A49DD /* libRestKitJSONParserYAJL.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitJSONParserYAJL.a;
+			remoteRef = CE3B854014CFA4DC002A49DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE3B854314CFA4DC002A49DD /* libRestKitJSONParserSBJSON.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitJSONParserSBJSON.a;
+			remoteRef = CE3B854214CFA4DC002A49DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE3B854514CFA4DC002A49DD /* libRestKitJSONParserJSONKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitJSONParserJSONKit.a;
+			remoteRef = CE3B854414CFA4DC002A49DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE3B854714CFA4DC002A49DD /* libRestKitXMLParserLibxml.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitXMLParserLibxml.a;
+			remoteRef = CE3B854614CFA4DC002A49DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE3B854914CFA4DC002A49DD /* libRestKitCoreData.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitCoreData.a;
+			remoteRef = CE3B854814CFA4DC002A49DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE3B854B14CFA4DC002A49DD /* libRestKitThree20.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitThree20.a;
+			remoteRef = CE3B854A14CFA4DC002A49DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE3B854D14CFA4DC002A49DD /* UISpec.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = UISpec.app;
+			remoteRef = CE3B854C14CFA4DC002A49DD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CE952F3F148DC5F900D316DF /* Resources */ = {
@@ -248,6 +605,10 @@
 				CE952F50148DC5F900D316DF /* InfoPlist.strings in Resources */,
 				CE952F59148DC5F900D316DF /* MainStoryboard.storyboard in Resources */,
 				CEFC49E814A114D400D1C7ED /* notes.txt in Resources */,
+				CE172BDF14D1BA0600D9A9CC /* zbar-back.png in Resources */,
+				CE172BE014D1BA0600D9A9CC /* zbar-help.html in Resources */,
+				CE172BE114D1BA0600D9A9CC /* zbar-helpicons.png in Resources */,
+				CE172BE214D1BA0600D9A9CC /* zbar-samples.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +650,7 @@
 				CEDC036B148E56FC0043508B /* RoomViewController.m in Sources */,
 				CE69F4A2148E5817004C316F /* CardViewController.m in Sources */,
 				CE69F4A5148E9746004C316F /* Dealer.m in Sources */,
+				CE172BBF14D11CC300D9A9CC /* NSString+containsCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +665,31 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CE3B856014CFAB66002A49DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = CE3B855F14CFAB66002A49DD /* PBXContainerItemProxy */;
+		};
+		CE3B856614CFABC7002A49DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKitNetwork;
+			targetProxy = CE3B856514CFABC7002A49DD /* PBXContainerItemProxy */;
+		};
+		CE3B856814CFABC7002A49DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKitObjectMapping;
+			targetProxy = CE3B856714CFABC7002A49DD /* PBXContainerItemProxy */;
+		};
+		CE3B856A14CFABC7002A49DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKitSupport;
+			targetProxy = CE3B856914CFABC7002A49DD /* PBXContainerItemProxy */;
+		};
+		CE3B856C14CFABC7002A49DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "RestKitJSONParser+YAJL";
+			targetProxy = CE3B856B14CFABC7002A49DD /* PBXContainerItemProxy */;
+		};
 		CE952F68148DC5F900D316DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CE952F40148DC5F900D316DF /* TrackerPoker */;
@@ -388,7 +775,16 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrackerPoker/TrackerPoker-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/RestKit/Build";
 				INFOPLIST_FILE = "TrackerPoker/TrackerPoker-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ZBarSDK\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -399,7 +795,16 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrackerPoker/TrackerPoker-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/RestKit/Build";
 				INFOPLIST_FILE = "TrackerPoker/TrackerPoker-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ZBarSDK\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
