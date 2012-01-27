@@ -12,6 +12,7 @@
 @synthesize email;
 @synthesize password;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -35,6 +36,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    Dealer * dealer = [Dealer sharedInstance];
+    email.text = dealer.email;
+    password.text = dealer.token;
 }
 
 - (void)viewDidUnload
@@ -55,6 +59,9 @@
 - (IBAction)processLogin:(UIButton *)sender {
     Dealer * dealer = [Dealer sharedInstance];
     [dealer login: email.text WithPassword: password.text];
+    [self dismissModalViewControllerAnimated: YES];
+}
+- (IBAction)cancelLogin:(UIButton *)sender {
     [self dismissModalViewControllerAnimated: YES];
 }
 @end

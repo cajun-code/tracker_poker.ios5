@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Dealer.h"
+#import "ZBarSDK.h"
 
 @interface RoomViewController : UIViewController
+    < ZBarReaderDelegate >
 @property (weak, nonatomic) IBOutlet UITextField *room;
 - (IBAction)joinRoom:(UIButton *)sender;
 - (IBAction)scanCode:(UIButton *)sender;
+- (IBAction)cancelRoom:(UIButton *)sender;
 
 @end

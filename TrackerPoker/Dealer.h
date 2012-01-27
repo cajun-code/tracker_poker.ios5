@@ -13,6 +13,7 @@
 @interface Dealer : NSObject <RKRequestDelegate>
 
 @property (nonatomic, strong) NSString * token;
+@property (nonatomic, strong) NSString * email;
 @property (nonatomic, strong) NSString * vote;
 @property (nonatomic, strong) NSString * room;
 @property (nonatomic, strong) NSString * story;

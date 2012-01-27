@@ -14,4 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 
+- (IBAction)cancelLogin:(UIButton *)sender;
+
 @end

@@ -17,6 +17,7 @@
 @implementation Dealer
 
 NSString * const TOKEN_KEY = @"TrackerPokerAuthToken";
+NSString * const EMAIL_KEY = @"TrackerPokerAuthEmail";
 NSString * BASE_URL = @"http://localhost:3000";
 NSString * LOGIN_PATH = @"/token/fetch";
 NSString * ROOM_PATH = @"/room/%@/join"; // "/room/:id/join"
@@ -55,6 +56,12 @@ NSString * VOTE_PATH = @"/room/%@/story/%@/vote"; // "/room/:room_id/story/:id/v
 -(NSString*)token{
     return [[NSUserDefaults standardUserDefaults] objectForKey: TOKEN_KEY];
 }
+- (void) setEmail:(NSString *)email{
+    [[NSUserDefaults standardUserDefaults] setObject: email forKey: EMAIL_KEY];
+}
+-(NSString*)email{
+    return [[NSUserDefaults standardUserDefaults] objectForKey: EMAIL_KEY];
+}
 - (void) joinRoom{
     RKClient* client = [RKClient sharedClient];
     NSMutableDictionary * params = [[NSMutableDictionary alloc] init ];
@@ -75,6 +82,7 @@ NSString * VOTE_PATH = @"/room/%@/story/%@/vote"; // "/room/:room_id/story/:id/v
     RKClient* client = [RKClient sharedClient];
     NSMutableDictionary * params = [[NSMutableDictionary alloc] init ];
     [params setObject: user forKey:@"username"];
+    self.email = user;
     [params setObject: password forKey:@"password"];
 //    NSLog(@"User: %@ Password: %@", user, password);
 //    NSDictionary * params =  [NSDictionary dictionaryWithObjectsAndKeys: user, @"username", password, @"password", nil];

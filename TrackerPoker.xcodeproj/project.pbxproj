@@ -14,6 +14,11 @@
 		CE172BE014D1BA0600D9A9CC /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = CE172BDB14D1BA0600D9A9CC /* zbar-help.html */; };
 		CE172BE114D1BA0600D9A9CC /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = CE172BDC14D1BA0600D9A9CC /* zbar-helpicons.png */; };
 		CE172BE214D1BA0600D9A9CC /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = CE172BDD14D1BA0600D9A9CC /* zbar-samples.png */; };
+		CE172BE414D1BBCC00D9A9CC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE172BE314D1BBCC00D9A9CC /* AVFoundation.framework */; };
+		CE172BE914D1BC3900D9A9CC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE172BE514D1BC3800D9A9CC /* CoreMedia.framework */; };
+		CE172BEA14D1BC3900D9A9CC /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE172BE614D1BC3800D9A9CC /* CoreVideo.framework */; };
+		CE172BEB14D1BC3900D9A9CC /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE172BE714D1BC3800D9A9CC /* libiconv.dylib */; };
+		CE172BEC14D1BC3900D9A9CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE172BE814D1BC3800D9A9CC /* QuartzCore.framework */; };
 		CE3B856114CFAB8D002A49DD /* libRestKitJSONParserYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B854114CFA4DC002A49DD /* libRestKitJSONParserYAJL.a */; };
 		CE3B856214CFAB8D002A49DD /* libRestKitNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B853914CFA4DC002A49DD /* libRestKitNetwork.a */; };
 		CE3B856314CFAB8D002A49DD /* libRestKitObjectMapping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B853B14CFA4DC002A49DD /* libRestKitObjectMapping.a */; };
@@ -194,6 +199,11 @@
 		CE172BDB14D1BA0600D9A9CC /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		CE172BDC14D1BA0600D9A9CC /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		CE172BDD14D1BA0600D9A9CC /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		CE172BE314D1BBCC00D9A9CC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CE172BE514D1BC3800D9A9CC /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		CE172BE614D1BC3800D9A9CC /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		CE172BE714D1BC3800D9A9CC /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		CE172BE814D1BC3800D9A9CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = ../../lib/objc/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		CE3B857014CFAC13002A49DD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		CE3B857214CFAC7D002A49DD /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -235,6 +245,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE172BE914D1BC3900D9A9CC /* CoreMedia.framework in Frameworks */,
+				CE172BEA14D1BC3900D9A9CC /* CoreVideo.framework in Frameworks */,
+				CE172BEB14D1BC3900D9A9CC /* libiconv.dylib in Frameworks */,
+				CE172BEC14D1BC3900D9A9CC /* QuartzCore.framework in Frameworks */,
+				CE172BE414D1BBCC00D9A9CC /* AVFoundation.framework in Frameworks */,
 				CE172BBC14D03DEF00D9A9CC /* CoreData.framework in Frameworks */,
 				CE3B857614CFAC7D002A49DD /* libxml2.dylib in Frameworks */,
 				CE3B857714CFAC7D002A49DD /* MobileCoreServices.framework in Frameworks */,
@@ -351,12 +366,6 @@
 			isa = PBXGroup;
 			children = (
 				CE172BC014D1BA0600D9A9CC /* ZBarSDK */,
-				CE172BBB14D03DEF00D9A9CC /* CoreData.framework */,
-				CE3B857214CFAC7D002A49DD /* libxml2.dylib */,
-				CE3B857314CFAC7D002A49DD /* MobileCoreServices.framework */,
-				CE3B857414CFAC7D002A49DD /* Security.framework */,
-				CE3B857514CFAC7D002A49DD /* SystemConfiguration.framework */,
-				CE3B857014CFAC13002A49DD /* CFNetwork.framework */,
 				CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */,
 				CE952F4B148DC5F900D316DF /* TrackerPoker */,
 				CE952F69148DC5F900D316DF /* TrackerPokerTests */,
@@ -377,6 +386,17 @@
 		CE952F44148DC5F900D316DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE172BBB14D03DEF00D9A9CC /* CoreData.framework */,
+				CE3B857214CFAC7D002A49DD /* libxml2.dylib */,
+				CE3B857314CFAC7D002A49DD /* MobileCoreServices.framework */,
+				CE3B857414CFAC7D002A49DD /* Security.framework */,
+				CE3B857514CFAC7D002A49DD /* SystemConfiguration.framework */,
+				CE3B857014CFAC13002A49DD /* CFNetwork.framework */,
+				CE172BE514D1BC3800D9A9CC /* CoreMedia.framework */,
+				CE172BE614D1BC3800D9A9CC /* CoreVideo.framework */,
+				CE172BE714D1BC3800D9A9CC /* libiconv.dylib */,
+				CE172BE814D1BC3800D9A9CC /* QuartzCore.framework */,
+				CE172BE314D1BBCC00D9A9CC /* AVFoundation.framework */,
 				CE952F45148DC5F900D316DF /* UIKit.framework */,
 				CE952F47148DC5F900D316DF /* Foundation.framework */,
 				CE952F49148DC5F900D316DF /* CoreGraphics.framework */,

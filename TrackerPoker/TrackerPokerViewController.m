@@ -47,7 +47,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.vote.text = [NSString stringWithFormat: @"Logged in with token: %@", self.dealer.token];
+    self.vote.text = [NSString stringWithFormat: @"Logged in as %@", self.dealer.email];
 }
 
 - (void)viewDidUnload
