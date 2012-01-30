@@ -76,7 +76,7 @@ NSString * VOTE_PATH = @"/room/%@/story/%@/vote"; // "/room/:room_id/story/:id/v
 
 }
 - (void) postVote{
-    if ([self.story isEqualToString:@"-1"]){
+    if (!([self.story isEqualToString:@"-1"])){
         RKClient* client = [RKClient sharedClient];
         NSMutableDictionary * params = [[NSMutableDictionary alloc] init ];
         NSString* voteUrl = [NSString stringWithFormat:VOTE_PATH, self.room, self.story];
@@ -128,6 +128,8 @@ NSString * VOTE_PATH = @"/room/%@/story/%@/vote"; // "/room/:room_id/story/:id/v
             self.token = body;
             NSString * message = [NSString stringWithFormat: @"Logged in as %@", self.email];
             [self postMessage:message];
+            self.room = nil;
+            self.story = nil;
         }else{
             [self postMessage:@"Log-in Failed"];
         }
