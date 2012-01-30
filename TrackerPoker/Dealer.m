@@ -10,7 +10,7 @@
 
 @interface Dealer()
 
-
+-(void)postMessage:(NSString*)message;
 
 @end
 
@@ -71,12 +71,26 @@ NSString * VOTE_PATH = @"/room/%@/story/%@/vote"; // "/room/:room_id/story/:id/v
     [client get: roomUrl queryParams: params delegate:self];
 
 }
-- (void) submitVote{
-//    RKClient* client = [RKClient sharedClient];
-//    NSMutableDictionary * params = [[NSMutableDictionary alloc] init ];
-    
+- (void) postVote{
+    RKClient* client = [RKClient sharedClient];
+    NSMutableDictionary * params = [[NSMutableDictionary alloc] init ];
+    NSString* voteUrl = [NSString stringWithFormat:VOTE_PATH, self.room, self.story];
+    NSLog(@"Vote URL: %@", voteUrl);
+    [params setObject: self.token forKey:@"auth_token"];
+    [params setObject: self.vote forKey:@"score"];
+    [client post: voteUrl params: params delegate:self];
 
 }
+- (void) submitVote{
+    RKClient* client = [RKClient sharedClient];
+    NSMutableDictionary * params = [[NSMutableDictionary alloc] init ];
+    NSString* storyUrl = [NSString stringWithFormat:STORY_PATH, self.room];
+    NSLog(@"Story URL: %@", storyUrl);
+    [params setObject: self.token forKey:@"auth_token"];
+    [client get: storyUrl queryParams: params delegate:self];
+    
+}
+
 - (void) login:(NSString*)user WithPassword:(NSString *)password{
     
     RKClient* client = [RKClient sharedClient];
@@ -93,20 +107,51 @@ NSString * VOTE_PATH = @"/room/%@/story/%@/vote"; // "/room/:room_id/story/:id/v
     NSString * response_url = [response.URL relativeString];
     NSLog(@"Response URL:  %@", response_url);
     if([response_url containsString: LOGIN_PATH]){
-        NSString * body = [response bodyAsString];
-        self.token = body;
-        RKClient* client = [RKClient sharedClient];
-        [client.HTTPHeaders setObject: self.token forKey:@"auth_token"];
-        NSLog(@"AuthToken %@", body);
-    }
-    if (self.room){
-        NSString* roomUrl = [NSString stringWithFormat:ROOM_PATH, self.room];
-        if([response_url containsString: roomUrl]){
+        if(response.statusCode == 200){
             NSString * body = [response bodyAsString];
-            NSLog(@"Joined Room %@", body);
+            self.token = body;
+            NSString * message = [NSString stringWithFormat: @"Logged in as %@", self.email];
+            [self postMessage:message];
+            NSLog(@"AuthToken %@", body);
+        }else{
+            [self postMessage:@"Log-in Failed"];
         }
     }
-    
+    // process room response
+    NSString* roomUrl = [NSString stringWithFormat:ROOM_PATH, self.room];
+    if([response_url containsString: roomUrl] && response.statusCode == 200){
+        NSString * body = [response bodyAsString];
+        NSString * message = [NSString stringWithFormat: @"Joining Room %@ was a %@", self.room, body];
+        [self postMessage:message];
+        NSLog(@"%@",message);
+    }
+    // Process get story submit
+    NSString* storyUrl = [NSString stringWithFormat:STORY_PATH, self.room];
+    if([response_url containsString: storyUrl] && response.statusCode == 200){
+        NSString * body = [response bodyAsString];
+        self.story = body;
+        NSString * message = [NSString stringWithFormat: @"Posting vote to story %@", self.story];
+        [self postMessage:message];
+        NSLog(@"%@",message);
+        [self postVote];
+        
+    }
+    NSString* voteUrl = [NSString stringWithFormat:VOTE_PATH, self.room, self.story];
+    if ([response_url containsString:voteUrl] && response.statusCode == 200) {
+        NSString * body = [response bodyAsString];
+        NSString * message = [NSString stringWithFormat: @"Vote %@ to story %@ was a %@",self.vote, self.story, body];
+        [self postMessage:message];
+        NSLog(@"%@",message);
+    }
+}
+
+-(void)postMessage:(NSString*)message{
+    NSDictionary* params = [NSDictionary dictionaryWithObject:message
+                                                    forKey:@"message"];
+    NSNotification *note = [NSNotification notificationWithName:@"TrackerPokerMessage"
+                                                         object:self
+                                                       userInfo:params];
+    [[NSNotificationCenter defaultCenter] postNotification:note];
 }
 // *** Not Used with ARC ***
 

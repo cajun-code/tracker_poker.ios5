@@ -24,7 +24,7 @@
 - (IBAction)votePressed:(UIButton *)sender {
     self.vote.text = sender.currentTitle;
     self.dealer.vote = self.vote.text;
-    
+    [self.dealer submitVote];
     
     // *** IOS 5 Change View with Segue ***
     [self performSegueWithIdentifier: @"card" sender:self ];
@@ -47,7 +47,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self
+           selector:@selector(showMessage:)
+               name:@"TrackerPokerMessage"
+             object:nil];
     self.vote.text = [NSString stringWithFormat: @"Logged in as %@", self.dealer.email];
+}
+-(void)showMessage: (NSNotification *)note{
+//    id poster = [note object];
+//    NSString *name = [note name];
+    NSDictionary * extraInformation = [note userInfo];
+    self.vote.text = [extraInformation objectForKey:@"message"];
 }
 
 - (void)viewDidUnload
@@ -61,11 +72,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated

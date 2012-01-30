@@ -19,6 +19,8 @@
 		CE172BEA14D1BC3900D9A9CC /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE172BE614D1BC3800D9A9CC /* CoreVideo.framework */; };
 		CE172BEB14D1BC3900D9A9CC /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE172BE714D1BC3800D9A9CC /* libiconv.dylib */; };
 		CE172BEC14D1BC3900D9A9CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE172BE814D1BC3800D9A9CC /* QuartzCore.framework */; };
+		CE36389C14D718C30026D5E7 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = CE36389B14D718C30026D5E7 /* icon_57.png */; };
+		CE36389E14D718D00026D5E7 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = CE36389D14D718D00026D5E7 /* icon_114.png */; };
 		CE3B856114CFAB8D002A49DD /* libRestKitJSONParserYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B854114CFA4DC002A49DD /* libRestKitJSONParserYAJL.a */; };
 		CE3B856214CFAB8D002A49DD /* libRestKitNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B853914CFA4DC002A49DD /* libRestKitNetwork.a */; };
 		CE3B856314CFAB8D002A49DD /* libRestKitObjectMapping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B853B14CFA4DC002A49DD /* libRestKitObjectMapping.a */; };
@@ -204,6 +206,8 @@
 		CE172BE614D1BC3800D9A9CC /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		CE172BE714D1BC3800D9A9CC /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		CE172BE814D1BC3800D9A9CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE36389B14D718C30026D5E7 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
+		CE36389D14D718D00026D5E7 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
 		CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = ../../lib/objc/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		CE3B857014CFAC13002A49DD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		CE3B857214CFAC7D002A49DD /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -365,6 +369,8 @@
 		CE952F36148DC5F900D316DF = {
 			isa = PBXGroup;
 			children = (
+				CE36389D14D718D00026D5E7 /* icon_114.png */,
+				CE36389B14D718C30026D5E7 /* icon_57.png */,
 				CE172BC014D1BA0600D9A9CC /* ZBarSDK */,
 				CE3B852414CFA4DB002A49DD /* RestKit.xcodeproj */,
 				CE952F4B148DC5F900D316DF /* TrackerPoker */,
@@ -629,6 +635,8 @@
 				CE172BE014D1BA0600D9A9CC /* zbar-help.html in Resources */,
 				CE172BE114D1BA0600D9A9CC /* zbar-helpicons.png in Resources */,
 				CE172BE214D1BA0600D9A9CC /* zbar-samples.png in Resources */,
+				CE36389C14D718C30026D5E7 /* icon_57.png in Resources */,
+				CE36389E14D718D00026D5E7 /* icon_114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
