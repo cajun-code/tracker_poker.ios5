@@ -63,31 +63,47 @@ NSString * VOTE_PATH = @"/room/%@/story/%@/vote"; // "/room/:room_id/story/:id/v
     return [[NSUserDefaults standardUserDefaults] objectForKey: EMAIL_KEY];
 }
 - (void) joinRoom{
-    RKClient* client = [RKClient sharedClient];
-    NSMutableDictionary * params = [[NSMutableDictionary alloc] init ];
-    NSString* roomUrl = [NSString stringWithFormat:ROOM_PATH, self.room];
-    NSLog(@"Room URL: %@", roomUrl);
-    [params setObject: self.token forKey:@"auth_token"];
-    [client get: roomUrl queryParams: params delegate:self];
+    if (self.token) {
+        RKClient* client = [RKClient sharedClient];
+        NSMutableDictionary * params = [[NSMutableDictionary alloc] init ];
+        NSString* roomUrl = [NSString stringWithFormat:ROOM_PATH, self.room];
+        NSLog(@"Room URL: %@", roomUrl);
+        [params setObject: self.token forKey:@"auth_token"];
+        [client get: roomUrl queryParams: params delegate:self];
+    }else{
+        [self postMessage:@"Log-in Required"];
+    }
 
 }
 - (void) postVote{
-    RKClient* client = [RKClient sharedClient];
-    NSMutableDictionary * params = [[NSMutableDictionary alloc] init ];
-    NSString* voteUrl = [NSString stringWithFormat:VOTE_PATH, self.room, self.story];
-    NSLog(@"Vote URL: %@", voteUrl);
-    [params setObject: self.token forKey:@"auth_token"];
-    [params setObject: self.vote forKey:@"score"];
-    [client post: voteUrl params: params delegate:self];
+    if ([self.story isEqualToString:@"-1"]){
+        RKClient* client = [RKClient sharedClient];
+        NSMutableDictionary * params = [[NSMutableDictionary alloc] init ];
+        NSString* voteUrl = [NSString stringWithFormat:VOTE_PATH, self.room, self.story];
+        NSLog(@"Vote URL: %@", voteUrl);
+        [params setObject: self.token forKey:@"auth_token"];
+        [params setObject: self.vote forKey:@"score"];
+        [client post: voteUrl params: params delegate:self];
+    }else{
+        [self postMessage:@"Voting is not open"];
+    }
 
 }
 - (void) submitVote{
-    RKClient* client = [RKClient sharedClient];
-    NSMutableDictionary * params = [[NSMutableDictionary alloc] init ];
-    NSString* storyUrl = [NSString stringWithFormat:STORY_PATH, self.room];
-    NSLog(@"Story URL: %@", storyUrl);
-    [params setObject: self.token forKey:@"auth_token"];
-    [client get: storyUrl queryParams: params delegate:self];
+    if (self.token){ 
+        if(self.room){
+            RKClient* client = [RKClient sharedClient];
+            NSMutableDictionary * params = [[NSMutableDictionary alloc] init ];
+            NSString* storyUrl = [NSString stringWithFormat:STORY_PATH, self.room];
+            NSLog(@"Story URL: %@", storyUrl);
+            [params setObject: self.token forKey:@"auth_token"];
+            [client get: storyUrl queryParams: params delegate:self];
+        }else{
+            [self postMessage:@"Joining a Room Required"];
+        }
+    }else{
+        [self postMessage:@"Log-in Required"];
+    }
     
 }
 
@@ -112,7 +128,6 @@ NSString * VOTE_PATH = @"/room/%@/story/%@/vote"; // "/room/:room_id/story/:id/v
             self.token = body;
             NSString * message = [NSString stringWithFormat: @"Logged in as %@", self.email];
             [self postMessage:message];
-            NSLog(@"AuthToken %@", body);
         }else{
             [self postMessage:@"Log-in Failed"];
         }
@@ -123,7 +138,7 @@ NSString * VOTE_PATH = @"/room/%@/story/%@/vote"; // "/room/:room_id/story/:id/v
         NSString * body = [response bodyAsString];
         NSString * message = [NSString stringWithFormat: @"Joining Room %@ was a %@", self.room, body];
         [self postMessage:message];
-        NSLog(@"%@",message);
+        
     }
     // Process get story submit
     NSString* storyUrl = [NSString stringWithFormat:STORY_PATH, self.room];
@@ -132,7 +147,6 @@ NSString * VOTE_PATH = @"/room/%@/story/%@/vote"; // "/room/:room_id/story/:id/v
         self.story = body;
         NSString * message = [NSString stringWithFormat: @"Posting vote to story %@", self.story];
         [self postMessage:message];
-        NSLog(@"%@",message);
         [self postVote];
         
     }
@@ -141,13 +155,15 @@ NSString * VOTE_PATH = @"/room/%@/story/%@/vote"; // "/room/:room_id/story/:id/v
         NSString * body = [response bodyAsString];
         NSString * message = [NSString stringWithFormat: @"Vote %@ to story %@ was a %@",self.vote, self.story, body];
         [self postMessage:message];
-        NSLog(@"%@",message);
+        
     }
 }
 
 -(void)postMessage:(NSString*)message{
+    NSLog(@"%@",message);
     NSDictionary* params = [NSDictionary dictionaryWithObject:message
-                                                    forKey:@"message"];
+                                                       forKey:@"message"];
+    
     NSNotification *note = [NSNotification notificationWithName:@"TrackerPokerMessage"
                                                          object:self
                                                        userInfo:params];
