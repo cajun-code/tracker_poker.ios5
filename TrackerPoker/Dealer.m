@@ -18,7 +18,8 @@
 
 NSString * const TOKEN_KEY = @"TrackerPokerAuthToken";
 NSString * const EMAIL_KEY = @"TrackerPokerAuthEmail";
-NSString * BASE_URL = @"http://localhost:3000";
+//NSString * BASE_URL = @"http://localhost:3000";
+NSString * BASE_URL = @"http://tracker-poker.herokuapp.com";
 NSString * LOGIN_PATH = @"/token/fetch";
 NSString * ROOM_PATH = @"/room/%@/join"; // "/room/:id/join"
 NSString * STORY_PATH = @"/room/%@/active_story"; // "/room/:id/active_story"
