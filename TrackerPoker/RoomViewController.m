@@ -105,5 +105,6 @@
     
     // EXAMPLE: do something useful with the barcode data
     room.text = symbol.data;
+    [reader dismissModalViewControllerAnimated: YES];
 }
 @end
